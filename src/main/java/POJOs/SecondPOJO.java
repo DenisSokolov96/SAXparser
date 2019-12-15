@@ -1,35 +1,30 @@
 package POJOs;
 
 public class SecondPOJO {
-    private int id;
-    private String mark;
-    private String model;
+    private String name;
+    private String teg;
 
-    public int getId() {
-        return id;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getTeg() {
+        return teg;
+    }
+    public void setTeg(String teg) {
+        this.teg = teg;
     }
 
-    public String getMark() {
-        return mark;
-    }
-
-    public void setMark(String mark) {
-        this.mark = mark;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
+    @Override
     public String toString() {
-        return "OtherEmployee:: ID="+this.id +" Mark=" + this.mark + " Model=" + this.model;
+        switch (teg){
+            case "university": return "Университет " + this.name;
+            case "faculty": return " Факультет " + this.name;
+            case "department": return "  Кафедра " + this.name;
+            default: return this.name;
+        }
     }
 }
