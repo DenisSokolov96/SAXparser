@@ -17,7 +17,6 @@ public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
-        log.info("123");
 
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
 
